@@ -1,0 +1,7 @@
+Bonus skal være på location 0
+sum skal være på location 6
+tmp skal være på location 11
+d skal være på location 2
+i skal være på location 7/8
+
+Man får en syntaks fejl som meddeler at variablen allerede er indenfor scopet.

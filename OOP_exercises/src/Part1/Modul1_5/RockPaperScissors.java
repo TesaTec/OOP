@@ -1,8 +1,8 @@
+package Part1.Modul1_5;
 //1. Exceptions: Sten-Saks-Papir
 import java.util.Scanner;
 import java.util.Random;
 import java.util.InputMismatchException;
-
 class RockPaperScissors 
 {
 	public static void main(String[] args) 
