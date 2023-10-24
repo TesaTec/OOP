@@ -3,13 +3,17 @@ package Part2.Modul2_5.Opg2_Polymorfi;
 public class Item {
     String name;
     double price;
-
-    String getName(String name)
+    Item(String name, double price)
+    {
+        this.name = name;
+        this.price = price;
+    }
+    String getName()
     {
         return name;
     }
 
-    double getPrice(double price)
+    double getPrice()
     {
         return price;
     }

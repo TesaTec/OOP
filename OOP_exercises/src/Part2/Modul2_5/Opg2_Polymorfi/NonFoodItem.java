@@ -4,8 +4,7 @@ public class NonFoodItem extends Item {
     String[] materials;
     public NonFoodItem(String name, double price, String[] materials)
     {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.materials = materials;
     }
 
@@ -17,7 +16,6 @@ public class NonFoodItem extends Item {
     String convertToString(String[] mats)
     {
         String list = "";
-        System.out.println("List of materials");
         for(int i = 0; i < mats.length; i++)
         {
             list +=  mats[i]+ " ";

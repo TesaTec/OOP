@@ -7,8 +7,7 @@ public class FoodItem extends Item {
 
     public FoodItem(String name, double price, Date expires)
     {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.expires = expires;
     }
     Date getExpires(Date expires)

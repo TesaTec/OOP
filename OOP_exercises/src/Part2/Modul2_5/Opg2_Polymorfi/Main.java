@@ -4,24 +4,22 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args)
     {
-        String[] mats = {"Stone", "Plastic", "Dirt"};
-        FoodItem[] foodItems = new FoodItem[10];
-        NonFoodItem[] nonFoodItems = new NonFoodItem[10];
+        Inventory inventory = new Inventory();
+        Item i1 = new Item("Chokolade", 13.00);
+        Item i2 = new Item("Burger", 25.00);
+        Item i3 = new FoodItem("Banan", 7.5, new Date(12*1000*60*60*24));
+        Item i4 = new NonFoodItem("Jet", 100.50, new String[] {"Metal", "Elektronik","Gummi"});
 
-        for(int i = 0; i < foodItems.length; i++) {
-            foodItems[i] = new FoodItem("Food " +(i+1), i * 12.5, new Date(i*1000*60*60*24));
+        Item[] items = new Item[] {i1, i2, i3, i4};
+
+        inventory.printStatus(inventory);
+        for(int i = 0;i < items.length; i++)
+        {
+            inventory.addItem(items[i]);
+            inventory.printStatus(inventory);
         }
 
-        for(int i = 0; i < nonFoodItems.length; i++) {
-            nonFoodItems[i] = new NonFoodItem("Item " + (i+1), i * 17.5, mats);
-        }
-
-        for(int i = 0; i < foodItems.length; i++) {
-            System.out.println(foodItems[i].toString());
-        }
-
-        for(int i = 0; i < nonFoodItems.length; i++) {
-            System.out.println(nonFoodItems[i].toString());
-        }
+        inventory.removeItem(i1);
+        inventory.printStatus(inventory);
     }
 }
