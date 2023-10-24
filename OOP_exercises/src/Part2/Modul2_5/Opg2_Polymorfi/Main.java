@@ -8,7 +8,7 @@ public class Main {
         Item i1 = new Item("Chokolade", 13.00);
         Item i2 = new Item("Burger", 25.00);
         Item i3 = new FoodItem("Banan", 7.5, new Date(12*1000*60*60*24));
-        Item i4 = new NonFoodItem("Jet", 100.50, new String[] {"Metal", "Elektronik","Gummi"});
+        Item i4 = new NonFoodItem("Jet", 140.50, new String[] {"Metal,", "Elektronik,","Gummi"});
 
         Item[] items = new Item[] {i1, i2, i3, i4};
 
@@ -18,7 +18,7 @@ public class Main {
             inventory.addItem(items[i]);
             inventory.printStatus(inventory);
         }
-
+        System.out.println("done");
         inventory.removeItem(i1);
         inventory.printStatus(inventory);
     }

@@ -7,14 +7,13 @@ public class Inventory {
     ArrayList<Item> items = new ArrayList<Item>();
     void addItem(Item item)
     {
-        items.add(item);
+        if(!items.contains(item)) {
+            items.add(item);
+        }
     }
     void removeItem(Item item)
     {
-        if(!items.contains(item))
-        {
             items.remove(item);
-        }
     }
     double getInventoryValue()
     {
@@ -30,7 +29,7 @@ public class Inventory {
         System.out.println("Inventory: ");
         for(int i = 0; i < items.size(); i++)
         {
-            System.out.println("- " + items.get(i));
+            System.out.println("- " + items.get(i).toString());
         }
     }
     public void printStatus(Inventory inventory)
@@ -39,4 +38,5 @@ public class Inventory {
         System.out.println("Total: " +inventory.getInventoryValue());
         System.out.println();
     }
+
 }
