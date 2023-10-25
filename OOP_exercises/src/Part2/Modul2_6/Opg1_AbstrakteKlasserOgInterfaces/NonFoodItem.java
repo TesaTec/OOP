@@ -1,6 +1,5 @@
-package Part2.Modul2_5.Opg2_Polymorfi;
+package Part2.Modul2_6.Opg1_AbstrakteKlasserOgInterfaces;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -35,5 +34,11 @@ public class NonFoodItem extends Item {
     public String toString()
     {
         return "Name: " +name + "\nPrice: "+ price + "\nMaterials list: " + convertToString(materials);
+    }
+
+    @Override
+    public boolean isExpired()
+    {
+        return false;
     }
 }
