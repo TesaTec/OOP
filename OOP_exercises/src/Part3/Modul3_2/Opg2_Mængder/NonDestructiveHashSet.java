@@ -61,4 +61,17 @@ class NonDestructiveHashSet<T> extends HashSet<T>
         return a.containsAll(set2);
     }
 
+    @Override
+    public void setLines(NonDestructiveSet<T> set)
+    {
+
+        System.out.print("------");
+        for (int i = 0; i <set.size(); i++)
+            {
+                System.out.print("--");
+            }
+            System.out.println();
+
+    }
+
 }

@@ -5,11 +5,15 @@ public class Main {
     {
         Integer[] set1 = {1,2,3,4,5,6,7,8,9,10};
         Integer[] set2 = {2,4,5,6,7,11,13,14,15};
-        Integer[] set3 = {11, 12, 13, 14, 15 };
+        Integer[] set3 = {11, 12, 13, 14, 15};
+        Integer[] set4 = {11, 12, 13, 14, 15};
 
         NonDestructiveHashSet<Integer> a  = new NonDestructiveHashSet<Integer>(set1);
         NonDestructiveHashSet<Integer> b = new NonDestructiveHashSet<Integer>(set2);
         NonDestructiveHashSet<Integer> c = new NonDestructiveHashSet<Integer>(set3);
+        NonDestructiveHashSet<Integer> d = new NonDestructiveHashSet<Integer>(set4);
+
+
 
         NonDestructiveSet<Integer> a_intersects_b = a.intersection(b);
         NonDestructiveSet<Integer> b_intersects_a = b.intersection(a);
@@ -20,32 +24,36 @@ public class Main {
 
         System.out.println("set1: " + a);
         System.out.println("set2: " + b);
-        System.out.println("-------------------------------------");
+        System.out.println("set3: " + c);
+        System.out.println("set4: " + d);
+        b.setLines(d);
 
         System.out.println("Intersection:");
         System.out.println(a_intersects_b);
         System.out.println(b_intersects_a);
-        System.out.println("---------------");
+        b_intersects_a.setLines(b_intersects_a);
 
         System.out.println("Union");
         System.out.println(a_unions_b);
         System.out.println(b_unions_a);
-        System.out.println("---------------");
+        a_unions_b.setLines(a_unions_b);
 
         System.out.println("Difference");
         System.out.println(a_difference_b);
         System.out.println(b_difference_a);
-        System.out.println("----------------");
+        a_difference_b.setLines(a_difference_b);
 
-        System.out.println("Is set1 disjoint from set2:");
+        System.out.println("Is a disjoint from c:");
         System.out.println(a.isDisjoint(c));
+        System.out.println("-----");
 
-        System.out.println("Is set1 subset of set2:");
+        System.out.println("Is a subset of b:");
         System.out.println(a.isSubset(b));
-        System.out.println("---------------");
-        System.out.println("Is set3 subset of set4:");
-        System.out.println(a.isSubset(a));
-        System.out.println("---------------");
+
+        System.out.println("Is c subset of d:");
+        System.out.println(c.isSubset(d));
+        System.out.println("-----");
 
     }
+
 }
