@@ -36,4 +36,29 @@ class NonDestructiveHashSet<T> extends HashSet<T>
         return result;
     }
 
+    @Override
+    public boolean isDisjoint(NonDestructiveSet<T> set2)
+    {
+        NonDestructiveSet<T> a = new NonDestructiveHashSet<T>();
+        a.addAll(this);
+        a.retainAll(set2);
+
+        if(a.isEmpty())
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+
+    }
+
+    @Override
+    public boolean isSubset(NonDestructiveSet<T> set2)
+    {
+        NonDestructiveSet<T> a = new NonDestructiveHashSet<T>();
+        a.addAll(this);
+        return a.containsAll(set2);
+    }
+
 }
