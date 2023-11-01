@@ -9,5 +9,5 @@ public interface NonDestructiveSet<T> extends Set<T> {
     NonDestructiveSet<T> difference(NonDestructiveSet<T> set1);
     boolean isDisjoint(NonDestructiveSet<T> set1);
     boolean isSubset(NonDestructiveSet<T> set1);
-    public void setLines(NonDestructiveSet<T> set);
+    void setLines(NonDestructiveSet<T> set);
 }
