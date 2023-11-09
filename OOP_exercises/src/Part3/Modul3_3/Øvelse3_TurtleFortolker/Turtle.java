@@ -15,13 +15,15 @@ public class Turtle {
     }
 
     public void mover() {
-        File cmdFile = new File("C:\\Users\\magnu\\Desktop\\Coding\\OOP\\OOP_exercises\\src\\Part3\\Modul3_3\\Øvelse3_TurtleFortolker\\cmdFile.txt");
+        String filePath = System.getProperty("user.dir") + "\\src\\Part3\\Modul3_3\\Øvelse3_TurtleFortolker\\cmdFile.txt";
+        String filePathSmiley = System.getProperty("user.dir") + "\\src\\Part3\\Modul3_3\\Øvelse3_TurtleFortolker\\smFile.txt";
+        File cmdFile = new File(filePath);
         try{
             Scanner drawer = new Scanner(cmdFile);
             while(drawer.hasNextLine()) {
                 String cmd = drawer.nextLine().toLowerCase();
                 switch (cmd) {
-                    case "draw":
+                    case "startdraw":
                         draw = true;
                         break;
                     case "stopdraw":
@@ -79,6 +81,10 @@ public class Turtle {
                             canvas.setValue(draw, x, y);
                         }
                         break;
+                    case "fill":
+                        for(int placeOnLine = 0; placeOnLine < canvas.width; placeOnLine++ ) {
+                            canvas.setValue(true, placeOnLine,y );
+                        }
                 }
 
             }
