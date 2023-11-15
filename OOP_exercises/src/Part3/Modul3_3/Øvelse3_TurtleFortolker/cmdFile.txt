@@ -3,7 +3,7 @@ GoSouth
 GoSouth
 GoSouth
 GoSouth
-Draw
+StartDraw
 GoSouth
 GoSouth
 GoSouth
@@ -37,7 +37,7 @@ StopDraw
 GoEast
 GoEast
 GoEast
-draw
+StartDraw
 GoEast
 
 
