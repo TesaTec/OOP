@@ -15,7 +15,8 @@ public class Turtle {
     }
 
     public void mover() {
-        File cmdFile = new File("C:\\Users\\magnu\\Desktop\\Coding\\OOP\\OOP_exercises\\src\\Part3\\Modul3_3\\Øvelse3_TurtleFortolker\\cmdFile.txt");
+        String filepath = System.getProperty("user.dir") + "\\src\\Part3\\Modul3_3\\Øvelse3_TurtleFortolker\\cmdFile1.txt";
+        File cmdFile = new File(filepath);
         try{
             Scanner drawer = new Scanner(cmdFile);
             while(drawer.hasNextLine()) {
